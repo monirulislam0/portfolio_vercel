@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Desktop Header -->
+    <header class="header z-[5] hidden md:block fixed w-[100%] top-[3%]">
+      <div class="w-[90%] mx-auto">
+        <nav
+          class="header_wrapper flex flex-nowrap justify-between bg-[#585d65] h-[80px] rounded-full items-center"
+        >
+          <div class="logo ml-[40px]">
+            <a href="#" class="flex">
+              <img src="/imgs/logo.png" alt="" class="h-[40px] w-[40px]" />
+              <p
+                class="text-white font-bold leading-[20px] ml-[20px] text-[18px]"
+              >
+                <span>Joe</span>
+                <br />
+                <span>Wilson</span>
+              </p>
+            </a>
+          </div>
+          <div class="menu overflow-hidden">
+            <ul
+              class="inline-flex ml-[40px] justify-center items-center flex-nowrap"
+            >
+              <li
+                class="uppercase text-white ml-[40px] font-bold cursor-pointer rounded-full text-[12px] hover:text-[#68e0cf]"
+              >
+                <a href="#">Home</a>
+              </li>
+              <li
+                class="uppercase text-white ml-[40px] font-bold cursor-pointer rounded-full text-[12px] hover:text-[#68e0cf]"
+              >
+                <a href="#">About</a>
+              </li>
+              <li
+                class="uppercase text-white ml-[40px] font-bold cursor-pointer rounded-full text-[12px] hover:text-[#68e0cf]"
+              >
+                <a href="#">Resume</a>
+              </li>
+              <li
+                class="uppercase text-white ml-[40px] font-bold cursor-pointer rounded-full text-[12px] hover:text-[#68e0cf]"
+              >
+                <a href="#">Portfolio</a>
+              </li>
+              <li
+                class="uppercase text-white ml-[40px] font-bold cursor-pointer rounded-full text-[12px] hover:text-[#68e0cf]"
+              >
+                <a href="#">contact</a>
+              </li>
+              <li
+                class="uppercase text-white ml-[40px] font-bold cursor-pointer rounded-full mr-[5px] text-[12px] pt-[15px] pb-[15px] pr-[35px] pl-[35px] border border-white border-[1px] hover:border-[#68e0cf] hover:text-[#68e0cf]"
+              >
+                <a href="#" class="block h-[100%] w-[100%]">Donwload CV</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Mobile Device header -->
+    <header class="header z-[5] block md:hidden fixed w-[100%] top-[3%]">
+      <div class="w-[90%] mx-auto">
+        <nav
+          class="header_wrapper flex flex-nowrap justify-between bg-[#585d65] h-[60px] rounded-full items-center"
+        >
+          <div class="logo ml-[20px]">
+            <a href="#" class="flex">
+              <img src="/imgs/logo.png" alt="" class="h-[30px] w-[30px]" />
+              <p
+                class="text-white font-bold leading-[15px] ml-[10px] text-[12px]"
+              >
+                <span>Joe</span>
+                <br />
+                <span>Wilson</span>
+              </p>
+            </a>
+          </div>
+          <div class="menu">
+            <div class="drawer">
+              <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+              <div class="drawer-content">
+                <!-- Page content here -->
+                <label for="my-drawer" class="btn rounded-full drawer-button">
+                  &#9776;</label
+                >
+              </div>
+              <div class="drawer-side z-[-1]">
+                <label
+                  for="my-drawer"
+                  aria-label="close sidebar"
+                  class="drawer-overlay"
+                ></label>
+                <ul
+                  class="menu bg-[#373b40] text-white min-h-full w-[100%] p-4 pt-[100px] flex justify-start items-start"
+                >
+                  <!-- Sidebar content here -->
+                  <li class="w-[100%] uppercase"><a>Home</a></li>
+                  <li class="w-[100%] uppercase"><a>About</a></li>
+                  <li class="w-[100%] uppercase"><a>Resume</a></li>
+                  <li class="w-[100%] uppercase"><a>Portfolio</a></li>
+                  <li class="w-[100%] uppercase"><a>Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main_body">
+      <div
+        class="body_wrapper overflow-hidden inline-flex flex-col md:flex-row w-[100%]"
+      >
+        <div
+          class="content_box w-[100%] md:w-[50%] bg-[url(/imgs/man.jpg)] float-left bg-center bg-no-repeat bg-cover"
+        >
+          <div class="h-[50vh] md:h-dvh bg-[rgba(104,224,207,0.5)]"></div>
+        </div>
+
+        <div
+          class="content_box w-[100%] md:w-[50%] bg-[#373b40] md:h-screen md:overflow-y-scroll md:overflow-x-visible"
+        >
+          <div
+            class="md:w-[87%] w-[100%] border md:border-[#585d65] border-r-[1px] pb-[15px] md:pb-[0]"
+          >
+            <!-- Section Home Content -->
+            <div
+              class="box bg-red md:h-screen w-[95%] mx-auto md:flex md:justify-center md:flex-col border-b-[1px] border-[#585d65] md:pb-[0] pb-[20px]"
+            >
+              <div
+                class="circle h-[200px] md:w-[200px] w-[300px] md:ml-[-100px] flex items-center leading-[42px] justify-center text-[42px] mx-auto mt-[-100px] md:mt-[0] bg-[#373b40] rounded-full z-[100]"
+              >
+                <h2 class="font-bold text-white ml-[40px]">
+                  Joe
+                  <br />
+                  Wilson
+                </h2>
+              </div>
+
+              <div class="pl-[30px] mt-[20px]">
+                <h2
+                  class="uppercase text-[rgba(104,224,207,1)] font-bold text-[12px]"
+                >
+                  Intern Web Developer
+                </h2>
+                <p class="pt-[10px] text[14px] text-white max-w-[500px]">
+                  Hello! I am Web Developer from United States, New York. I have
+                  rich experience in web site design and building, also I am
+                  good at wordpress. I love to talk with you about our unique.
+                </p>
+                <div>
+                  <button
+                    class="btn btn-soft bg-transparent text-white rounded-full mt-[15px]"
+                  >
+                    Contact Me
+                  </button>
+                  <button
+                    class="btn btn-soft bg-transparent mt-[15px] rounded-full text-white ml-[]"
+                  >
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Box End -->
+
+            <!-- Box Start -->
+            <div
+              class="box bg-red w-[95%] mx-auto md:h-auto md:flex md:justify-start md:flex-col border-b-[1px] border-[#585d65] md:pb-[30px] pb-[20px]"
+            >
+              <div class="pl-[30px] mt-[20px]">
+                <h1 class="mb-[10px] font-bold text-white text-[32px]">
+                  About me
+                </h1>
+                <h2
+                  class="uppercase text-[rgba(104,224,207,1)] font-bold text-[12px]"
+                >
+                  My Story
+                </h2>
+                <div class="flex flex-wrap">
+                  <p class="pt-[10px] text[8px] text-white max-w-[50%]">
+                    Pellentesque posuere. Praesent turpis. Aenean posuere,
+                    tortor sed cursus feugiat, nunc augue blandit nunc, eu
+                    sollicitudin urna dolor sagittis lacus.
+                  </p>
+                  <p class="pt-[10px] text[8px] text-white max-w-[50%]">
+                    Pellentesque posuere. Praesent turpis. Aenean posuere,
+                    tortor sed cursus feugiat, nunc augue blandit nunc, eu
+                    sollicitudin urna dolor sagittis lacus.
+                  </p>
+                  <p class="pt-[20px] text[8px] text-white max-w-[100%]">
+                    Pellentesque posuere. Praesent turpis. Aenean posuere,
+                    tortor sed cursus feugiat, nunc augue blandit nunc, eu
+                    sollicitudin urna dolor sagittis lacus. Donec elit libero,
+                    sodales nec, volutpat a, suscipit non, turpis.
+                  </p>
+                </div>
+                <div class="md:flex pt-[20px]">
+                  <div class="md:w-[50%]">
+                    <p class="flex justify-start">
+                      <span
+                        class="uppercase w-[100px] text-[#68e0cf] text-[12px] font-bold"
+                        >age:</span
+                      >
+                      <span class="text-white text-[12px] font-bold"> 24</span>
+                    </p>
+                    <p class="flex justify-start">
+                      <span
+                        class="uppercase w-[100px] text-[#68e0cf] text-[12px] font-bold"
+                        >Freelance:</span
+                      >
+                      <span class="text-white text-[12px] font-bold">
+                        Available</span
+                      >
+                    </p>
+                    <p class="flex justify-start">
+                      <span
+                        class="uppercase w-[100px] text-[#68e0cf] text-[12px] font-bold"
+                        >Phone:</span
+                      >
+                      <span class="text-white text-[12px] font-bold">
+                        +12562548456</span
+                      >
+                    </p>
+                  </div>
+                  <div class="md:w-[50%]">
+                    <p class="flex justify-start">
+                      <span
+                        class="uppercase w-[100px] text-[#68e0cf] text-[12px] font-bold"
+                        >Residence:</span
+                      >
+                      <span class="text-white text-[12px] font-bold"> USA</span>
+                    </p>
+                    <p class="flex justify-start">
+                      <span
+                        class="uppercase w-[100px] text-[#68e0cf] text-[12px] font-bold"
+                        >Address:</span
+                      >
+                      <span class="text-white text-[12px] font-bold">
+                        San Francisco</span
+                      >
+                    </p>
+                    <p class="flex justify-start">
+                      <span
+                        class="uppercase w-[100px] text-[#68e0cf] text-[12px] font-bold"
+                        >E-Mail:</span
+                      >
+                      <span class="text-white text-[12px] font-bold">
+                        mdmonirul@gmail.com</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Box End -->
+            <!-- Box Start -->
+            <div
+              class="box bg-red w-[95%] mx-auto md:h-auto md:flex md:justify-start md:flex-col border-b-[1px] border-[#585d65] md:pb-[30px] pb-[20px]"
+            >
+              <div class="pl-[30px] mt-[20px]">
+                <h1 class="mb-[10px] font-bold text-white text-[32px]">
+                  Services
+                </h1>
+                <h2
+                  class="uppercase text-[rgba(104,224,207,1)] font-bold text-[12px]"
+                >
+                  What i do
+                </h2>
+                <div class="flex flex-wrap">
+                  <div
+                    class="flex justify-center flex-col items-center pt-[10px] pb-[10px] md:w-[50%]"
+                  >
+                    <div>
+                      <div
+                        class="icon text-[rgba(104,224,207,1)] flex items-center justify-center mb-[5px]"
+                      >
+                        <i class="fas fa-brain"></i>
+                      </div>
+                      <h2 class="font-bold text-white mb-[5px]">
+                        Economic Science
+                      </h2>
+                    </div>
+                    <p class="text-[12px] text-white text-center mb-[5px]">
+                      Economics is a social science concerned with the
+                      production, consumption of goods and services.
+                    </p>
+                  </div>
+                  <div
+                    class="flex justify-center flex-col items-center pt-[10px] pb-[10px] md:w-[50%]"
+                  >
+                    <div>
+                      <div
+                        class="icon text-[rgba(104,224,207,1)] flex items-center justify-center mb-[5px]"
+                      >
+                        <i class="fas fa-brain"></i>
+                      </div>
+                      <h2 class="font-bold text-white mb-[5px]">
+                        Economic Science
+                      </h2>
+                    </div>
+                    <p class="text-[12px] text-white text-center mb-[5px]">
+                      Economics is a social science concerned with the
+                      production, consumption of goods and services.
+                    </p>
+                  </div>
+                  <div
+                    class="flex justify-center flex-col items-center pt-[10px] pb-[10px] md:w-[50%]"
+                  >
+                    <div>
+                      <div
+                        class="icon text-[rgba(104,224,207,1)] flex items-center justify-center mb-[5px]"
+                      >
+                        <i class="fas fa-brain"></i>
+                      </div>
+                      <h2 class="font-bold text-white mb-[5px]">
+                        Economic Science
+                      </h2>
+                    </div>
+                    <p class="text-[12px] text-white text-center mb-[5px]">
+                      Economics is a social science concerned with the
+                      production, consumption of goods and services.
+                    </p>
+                  </div>
+                  <div
+                    class="flex justify-center flex-col items-center pt-[10px] pb-[10px] md:w-[50%]"
+                  >
+                    <div>
+                      <div
+                        class="icon text-[rgba(104,224,207,1)] flex items-center justify-center mb-[5px]"
+                      >
+                        <i class="fas fa-brain"></i>
+                      </div>
+                      <h2 class="font-bold text-white mb-[5px]">
+                        Economic Science
+                      </h2>
+                    </div>
+                    <p class="text-[12px] text-white text-center mb-[5px]">
+                      Economics is a social science concerned with the
+                      production, consumption of goods and services.
+                    </p>
+                  </div>
+                  <div
+                    class="flex justify-center flex-col items-center pt-[10px] pb-[10px] md:w-[50%]"
+                  >
+                    <div>
+                      <div
+                        class="icon text-[rgba(104,224,207,1)] flex items-center justify-center mb-[5px]"
+                      >
+                        <i class="fas fa-brain"></i>
+                      </div>
+                      <h2 class="font-bold text-white mb-[5px]">
+                        Economic Science
+                      </h2>
+                    </div>
+                    <p class="text-[12px] text-white text-center mb-[5px]">
+                      Economics is a social science concerned with the
+                      production, consumption of goods and services.
+                    </p>
+                  </div>
+                  <div
+                    class="flex justify-center flex-col items-center pt-[10px] pb-[10px] md:w-[50%]"
+                  >
+                    <div>
+                      <div
+                        class="icon text-[rgba(104,224,207,1)] flex items-center justify-center mb-[5px]"
+                      >
+                        <i class="fas fa-brain"></i>
+                      </div>
+                      <h2 class="font-bold text-white mb-[5px]">
+                        Economic Science
+                      </h2>
+                    </div>
+                    <p class="text-[12px] text-white text-center mb-[5px]">
+                      Economics is a social science concerned with the
+                      production, consumption of goods and services.
+                    </p>
+                  </div>
+                  <div
+                    class="flex justify-center flex-col items-center pt-[10px] pb-[10px] md:w-[50%]"
+                  >
+                    <div>
+                      <div
+                        class="icon text-[rgba(104,224,207,1)] flex items-center justify-center mb-[5px]"
+                      >
+                        <i class="fas fa-brain"></i>
+                      </div>
+                      <h2 class="font-bold text-white mb-[5px]">
+                        Economic Science
+                      </h2>
+                    </div>
+                    <p class="text-[12px] text-white text-center mb-[5px]">
+                      Economics is a social science concerned with the
+                      production, consumption of goods and services.
+                    </p>
+                  </div>
+                  <div
+                    class="flex justify-center flex-col items-center pt-[10px] pb-[10px] md:w-[50%]"
+                  >
+                    <div>
+                      <div
+                        class="icon text-[rgba(104,224,207,1)] flex items-center justify-center mb-[5px]"
+                      >
+                        <i class="fas fa-brain"></i>
+                      </div>
+                      <h2 class="font-bold text-white mb-[5px]">
+                        Economic Science
+                      </h2>
+                    </div>
+                    <p class="text-[12px] text-white text-center mb-[5px]">
+                      Economics is a social science concerned with the
+                      production, consumption of goods and services.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Box End -->
+
+            <!-- Box Start -->
+            <div
+              class="box bg-red w-[95%] mx-auto md:h-auto md:flex md:justify-start md:flex-col border-b-[1px] border-[#585d65] md:pb-[30px] pb-[20px]"
+            >
+              <div class="pl-[30px] mt-[20px] flex justify-between">
+                <div>
+                  <h1 class="mb-[10px] font-bold text-white text-[32px]">
+                    Pricing
+                  </h1>
+                  <h2
+                    class="uppercase text-[rgba(104,224,207,1)] font-bold text-[12px]"
+                  >
+                    My Plans
+                  </h2>
+                </div>
+                <div class="relative">
+                  <div
+                    class="swiper-button-prev  absolute border border-[#fff] p-[5px] rounded-full !text-white !h-[50px] !w-[50px] !left-[-120px]
+                    after:!text-[12px]
+                    after:!text-white
+                    "
+                  ></div>
+                  <div
+                    class="swiper-button-next 
+                    after:!text-[12px]
+                    after:!text-white
+                    absolute border border-[#585d65] p-[5px] rounded-full !text-white !h-[50px] !w-[50px]"
+                  ></div>
+                  <!-- <hr
+                    class="border-[0] 
+                    translate-x-[-72px]
+                    translate-y-[2px]
+                    border-b-[1px] border-b-[#585d65] absolute w-[82px] top-[50%]"
+                  /> -->
+                </div>
+              </div>
+              <div>
+                <!-- Slider main container -->
+                <div
+                  class="swiper"
+                  enter-class="w-[600px] h-[300px] !mt-[10px]"
+                >
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide flex mt-[25px] items-center justify-center md:w-[50%] w-[100%]">
+                      <div class="
+                      icon text-[#68e0cf]
+                      flex justify-center items-center flex-col
+                      " >
+                        <i class="fas fa-star"></i>
+                        <p class="font-bold text-white">Basic</p>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <sup class="text-[#999]">$</sup>
+                        <span class="text-white font-bold text-[32px]">39</span>
+                        <sub class="text-[#999] mt-[15px]">hour</sub>
+                      </div>
+                      <div class="">
+                        <ul >
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> Web Development</li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> Advertising</li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> Game Development</li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> <del>Music Writing</del> </li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> <del>Photo Graphy</del> </li>
+                        </ul>
+                      </div>
+                      <div class="flex justify-center items-center flex-col pt-[10px]">
+                        <button class="btn btn-soft text-white bg-transparent rounded-full uppercase text-[12px] border-[#999]"> Buy Now ></button>
+                      </div>
+                    </div> 
+                    
+                    <!-- Slides -->
+                    <div class="swiper-slide flex mt-[25px] items-center justify-center md:w-[50%] w-[100%]">
+                      <div class="
+                      icon text-[#68e0cf]
+                      flex justify-center items-center flex-col
+                      " >
+                        <i class="fas fa-star"></i>
+                        <p class="font-bold text-white">Basic</p>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <sup class="text-[#999]">$</sup>
+                        <span class="text-white font-bold text-[32px]">31</span>
+                        <sub class="text-[#999] mt-[15px]">hour</sub>
+                      </div>
+                      <div class="">
+                        <ul >
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> Web Development</li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> Advertising</li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> Game Development</li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> <del>Music Writing</del> </li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> <del>Photo Graphy</del> </li>
+                        </ul>
+                      </div>
+                      <div class="flex justify-center items-center flex-col pt-[10px]">
+                        <button class="btn btn-soft text-white bg-transparent rounded-full uppercase text-[12px] border-[#999]"> Buy Now ></button>
+                      </div>
+                    </div>
+                    
+                    <!-- Slides -->
+                    <div class="swiper-slide flex mt-[25px] items-center justify-center md:w-[50%] w-[100%]">
+                      <div class="
+                      icon text-[#68e0cf]
+                      flex justify-center items-center flex-col
+                      " >
+                        <i class="fas fa-star"></i>
+                        <p class="font-bold text-white">Basic</p>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <sup class="text-[#999]">$</sup>
+                        <span class="text-white font-bold text-[32px]">29</span>
+                        <sub class="text-[#999] mt-[15px]">hour</sub>
+                      </div>
+                      <div class="">
+                        <ul >
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> Web Development</li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> Advertising</li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> Game Development</li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> <del>Music Writing</del> </li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> <del>Photo Graphy</del> </li>
+                        </ul>
+                      </div>
+                      <div class="flex justify-center items-center flex-col pt-[10px]">
+                        <button class="btn btn-soft text-white bg-transparent rounded-full uppercase text-[12px] border-[#999]"> Buy Now ></button>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- If we need navigation buttons -->
+                </div>
+              </div>
+            </div>
+            <!-- Box End -->
+
+            
+            <!-- Box Start -->
+            <div
+              class="box bg-red w-[95%] mx-auto md:h-auto md:flex md:justify-start md:flex-col border-b-[1px] border-[#585d65] md:pb-[30px] pb-[20px]"
+            >
+              <div class="pl-[30px] mt-[20px] flex justify-between">
+                <div>
+                  <h1 class="mb-[10px] font-bold text-white text-[32px]">
+                    Experience
+                  </h1>
+                  <h2
+                    class="uppercase text-[rgba(104,224,207,1)] font-bold text-[12px]"
+                  >
+                    Working With
+                  </h2>
+                </div>
+                <div class="relative">
+                  <div
+                    class="swiper-button-prev1  absolute border border-[#fff] p-[5px] rounded-full !text-white !h-[50px] !w-[50px] !left-[-120px]
+                    after:!text-[12px]
+                    after:!text-white
+                    "
+                  ></div>
+                  <div
+                    class="swiper-button-next1 
+                    after:!text-[12px]
+                    after:!text-white
+                    absolute border border-[#585d65] p-[5px] rounded-full !text-white !h-[50px] !w-[50px]"
+                  ></div>
+                  <!-- <hr
+                    class="border-[0] 
+                    translate-x-[-72px]
+                    translate-y-[2px]
+                    border-b-[1px] border-b-[#585d65] absolute w-[82px] top-[50%]"
+                  /> -->
+                </div>
+              </div>
+              <div>
+                <!-- Slider main container -->
+                <div
+                  class="swiper"
+                  enter-class="w-[600px] h-[300px] !mt-[10px]"
+                >
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide flex mt-[25px] items-center justify-center md:w-[50%] w-[100%]">
+                      <div class="
+                      icon text-[#68e0cf]
+                      flex justify-center items-center flex-col
+                      " >
+                      <p class="font-bold text-[12px] text-[#68e0cf] ">Present</p>
+                        <h2 class="font-bold text-white ">The Turin Olympics</h2>
+                      </div>
+                    </div> 
+                    
+                    <!-- Slides -->
+                    <div class="swiper-slide flex mt-[25px] items-center justify-center md:w-[50%] w-[100%]">
+                      <div class="
+                      icon text-[#68e0cf]
+                      flex justify-center items-center flex-col
+                      " >
+                        <i class="fas fa-star"></i>
+                        <p class="font-bold text-white">Basic</p>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <sup class="text-[#999]">$</sup>
+                        <span class="text-white font-bold text-[32px]">31</span>
+                        <sub class="text-[#999] mt-[15px]">hour</sub>
+                      </div>
+                      <div class="">
+                        <ul >
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> Web Development</li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> Advertising</li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> Game Development</li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> <del>Music Writing</del> </li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> <del>Photo Graphy</del> </li>
+                        </ul>
+                      </div>
+                      <div class="flex justify-center items-center flex-col pt-[10px]">
+                        <button class="btn btn-soft text-white bg-transparent rounded-full uppercase text-[12px] border-[#999]"> Buy Now ></button>
+                      </div>
+                    </div>
+                    
+                    <!-- Slides -->
+                    <div class="swiper-slide flex mt-[25px] items-center justify-center md:w-[50%] w-[100%]">
+                      <div class="
+                      icon text-[#68e0cf]
+                      flex justify-center items-center flex-col
+                      " >
+                        <i class="fas fa-star"></i>
+                        <p class="font-bold text-white">Basic</p>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <sup class="text-[#999]">$</sup>
+                        <span class="text-white font-bold text-[32px]">29</span>
+                        <sub class="text-[#999] mt-[15px]">hour</sub>
+                      </div>
+                      <div class="">
+                        <ul >
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> Web Development</li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> Advertising</li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> Game Development</li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> <del>Music Writing</del> </li>
+                          <li class="text-white text-[10px] mt-[7px] mb-[7px] text-center"> <del>Photo Graphy</del> </li>
+                        </ul>
+                      </div>
+                      <div class="flex justify-center items-center flex-col pt-[10px]">
+                        <button class="btn btn-soft text-white bg-transparent rounded-full uppercase text-[12px] border-[#999]"> Buy Now ></button>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- If we need navigation buttons -->
+                </div>
+              </div>
+            </div>
+            <!-- Box End -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }, slidesPerView: 2,
+      });
+    </script>
+  </body>
+</html>
